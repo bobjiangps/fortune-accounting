@@ -13,9 +13,9 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Startup Name Generator',
+      title: 'Startup Name Generator MyApp',
       theme: ThemeData(primarySwatch: Colors.deepPurple),
-      home: const RandomWords(),
+      home: const Accounting(),
     );
   }
   // #enddocregion build
@@ -23,7 +23,7 @@ class MyApp extends StatelessWidget {
 // #enddocregion MyApp
 
 // #docregion RWS-var
-class _RandomWordsState extends State<RandomWords> {
+class _AccountingState extends State<Accounting> {
   final _suggestions = <WordPair>[];
   final _saved = Set<WordPair>();
   final _biggerFont = const TextStyle(fontSize: 18);
@@ -78,7 +78,7 @@ class _RandomWordsState extends State<RandomWords> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Startup Name Generator'),
+        title: const Text('Startup Name Generator override'),
         actions: <Widget>[
           IconButton(icon: const Icon(Icons.list), onPressed: _pushSaved),
         ],
@@ -121,9 +121,9 @@ class _RandomWordsState extends State<RandomWords> {
 }
 // #enddocregion RWS-var
 
-class RandomWords extends StatefulWidget {
-  const RandomWords({Key? key}) : super(key: key);
+class Accounting extends StatefulWidget {
+  const Accounting({Key? key}) : super(key: key);
 
   @override
-  _RandomWordsState createState() => _RandomWordsState();
+  _AccountingState createState() => _AccountingState();
 }
